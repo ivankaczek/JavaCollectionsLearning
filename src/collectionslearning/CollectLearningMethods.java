@@ -6,6 +6,7 @@
 package collectionslearning;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -38,10 +39,40 @@ public class CollectLearningMethods {
     }
     
     
+    public ArrayList<String> createArrayCommonDogNames(){
+        ArrayList<String> commonDogNames = new ArrayList();
+        commonDogNames.add("Beagle");
+        commonDogNames.add("Dalmatian");
+        commonDogNames.add("Cocker");
+        commonDogNames.add("English Setter");
+        commonDogNames.add("Chihuahua");
+        commonDogNames.add("German Sheffer");
+        
+        
+        return commonDogNames;
+    }
+    
     public void showEveryStringInArrayList(ArrayList<String> arr){
+        System.out.println(" ");
         for (String st : arr) {
             System.out.println(st);
         }
+        System.out.println("-------------------------- * ------------------------------");
+    }
+    
+    public void deleteStringItemIterator(ArrayList<String> a){  
+        System.out.println(" ");
+        Iterator<String> iter = a.iterator();
+        System.out.println("Please write the String item you wish to delete/remove");
+        String auxName2search = sc.next();
+        for (int i = 0; i < a.size(); i++) {
+            if (iter.next().equals(auxName2search)){
+                iter.remove();
+            }           
+        }
+        
+        
+        
     }
     
 }
